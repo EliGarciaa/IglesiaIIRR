@@ -46,7 +46,7 @@
 	<div class="row">
 		<div class="col-md-12">
 			<h5 align="right">
-				<a class="btn btn-lg btn-success" data-toggle="modal" href='#modal-id'>Nuevo Ingreso</a>
+				<a class="btn btn-lg btn-success" data-toggle="modal" href='#modal-id'><span class="glyphicon glyphicon-ok-circle"></span> Nuevo Ingreso</a>
 				<div class="modal fade" id="modal-id">
 				<div class="modal-content">
 				<div class="modal-header">
@@ -76,10 +76,12 @@
 					<div class="row">
 					<form action="">
 						<div class="col-md-3">
-							<h4 align="right"><label for="ministerio1">Ministerio</label></h4>
+							<h4 align="right"><label for="ministerio1" id="SelectMinistres">Ministerio</label></h4>
 						</div>
 						<div class="col-md-3">
-							<h4><input class="form-control" id="ministerio1" type="text" placeholder="Ministerio"></h4>
+							<h4><select id="seleccionar" class="form-control" required="required">
+								<option value=""></option>
+							</select></h4>
 						</div>
 						<div class="col-md-3">
 							<h4 align="right"><label for="descripcion1">Descripcion</label></h4>
@@ -92,8 +94,8 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-					<button type="button" class="btn btn-primary">Guardar Ingreso</button>
+					<button type="button" class="btn btn-lg btn-default" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn btn-lg btn-success" onclick="save();">Guardar Ingreso</button>
 				</div>
 				</div>
 				</div>

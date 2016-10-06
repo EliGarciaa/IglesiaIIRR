@@ -13,3 +13,8 @@ function entrar(){
 	document.getElementById("usuario").value = "";
 	document.getElementById("contraseña").value = "";
 }
+
+function showMinistres(getMinistris){
+	for (var i in getMinistris)
+		alert("Si esta Recibiendo");
+}
