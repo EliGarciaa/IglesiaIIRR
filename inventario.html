@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Inventario </title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<nav class="navbar navbar-inverse" role="navigation">
+	 <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse"
+              data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Desplegar navegación</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <img src="" width="100" height="50" >
+      <!-- las medidas para el logo que va en la navegacion es width="100" height="50" --> 
+    </div>
+  
+    <!-- Agrupar los enlaces de navegación, los formularios y cualquier
+         otro elemento que se pueda ocultar al minimizar la barra -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        <li ><a href="">Inicio</a></li>
+        <li class="active" ><a href="">Inventario</a></li>
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            Menú #1 <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="">Acción #1</a></li>
+            <li><a href="">Acción #2</a></li>
+            <li><a href="">Acción #3</a></li>
+            <li class="divider"></li>
+            <li><a href="">Acción #4</a></li>
+            <li class="divider"></li>
+            <li><a href="">Acción #5</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="">Enlace #3</a></li>
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            Menú #2 <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="">Acción #1</a></li>
+            <li><a href="">Acción #2</a></li>
+            <li><a href="">Acción #3</a></li>
+            <li class="divider"></li>
+            <li><a href="">Acción #4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</nav>	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<img src="" width="300" height="125">
+				<!-- tamaño de el logo que se utilizara width="300" height="125" -->
+			</div>
+			<div class="col-md-4">
+				<br>
+				<br>
+				<P ALIGN=center>
+				<font face="comic ms" size="5">
+					Ingreso de productos
+				</font>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+	</div>
+	<!-- ====Termina la Barra de navegacion ======== -->
+	<br>
+	<br>
+	<br>
+	<!-- esto es para una ventana modal para aguardar -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<center>
+					<a class="btn btn-primary" data-toggle="modal" href='#modal-id'>Ingresar nuevos datos</a>
+	<div class="modal fade" id="modal-id">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Ingresar</h4>
+				</div>
+				<div class="modal-body">
+<!--- esto es para los campos de texto del formulario -->
+		<div class="row">
+			<div class="col-md-3">
+				<P ALIGN=right>
+				<span class="glyphicon glyphicon-pencil"></span>
+					<font face="comic ms" size="4">Nombre:</font>
+			</div>
+			<div class="col-md-9">
+				<div class="form-group has-success">
+					<input type="text"  id="inp1" class="form-control" required="required"  title="Nombre" placeholder="Ingresar Nombre">
+				</div>	
+			</div>
+		</div>					
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-md-3">
+				<P ALIGN=right>
+						<span class="glyphicon glyphicon-list"></span>
+					<font face="comic ms" size="4">Cantidad:</font>
+			</div>
+			<div class="col-md-9">
+				<div class="form-group has-success">
+					<input type="text"  id="inp2" class="form-control" required="required"  title="Cantidad" placeholder="Ingresar Cantidad">
+				</div>	
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-md-3">
+				<P ALIGN=right>
+					<span class="glyphicon glyphicon-usd"></span>
+					<font face="comic ms" size="4">Precio Estimado:</font>
+			</div>
+			<div class="col-md-9">
+				<div class="form-group has-success">
+					<input type="text"  id="inp3" class="form-control" required="required"  title="Precio" placeholder="Ingresar precio estimado">
+				</div>	
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-md-7">
+				<P ALIGN=right>
+					<span class="glyphicon glyphicon-book">
+						<font face="comic ms" size="4">Ministerio a que le pertenece:</font>
+					</span>	
+			</div>
+			<div class="col-md-5">
+				<select name="" id="select1" class="form-control" >
+				</select>
+			</div>
+		</div>
+
+
+<!-- termina todo lo del formulario ================-->
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal" onclick="Borrar()">Cancelar</button>
+					<button type="button" class="btn btn-success" onclick="SaveDate()">Guardar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+				</center>
+			</div>
+<!-- =========== Fin de Ventana modal ===========-->
+			<div class="col-md-2">
+					<P ALIGN=right>
+					<font face="comic ms" size="4">
+						Buscar:
+					</font>
+			</div>
+			<div class="col-md-4">
+				<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+			</div>
+		</div>	
+	</div>
+	
+	
+
+<!--=== ESTO ES LA TABLA DE LOS DATOS A MOSTRAR ======-->
+	<br>
+	<br>
+	<div class="container">
+		<div class="row">
+			<table class="table table-condensed table-hover" id="table1">
+				<thead>
+					<tr>
+						<th>Nombre</th>
+						<th>Cantidad</th>
+						<th>Precio Estimado</th>
+						<th>Ministerio</th>
+						<th><span class="glyphicon glyphicon-trash"></span></th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	
+
+
+	</header>
+	<footer>
+		
+	</footer>	
+</body>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/controladorInventario.js"></script>
+	<script type="text/javascript" src="js/modeloinventario.js"></script>
+	<script>
+		mostrar();
+	</script>
+	<script> 
+	showreloaded();
+	</script>
+	<script> 
+		most();
+	</script>
+</html>
+
+
+
